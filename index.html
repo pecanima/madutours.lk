@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Madu tours | Travel.co</title>
+    <link rel="stylesheet" href="styles\index.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav__logo"><a href="#">Travel.lk</a></div>
+      <a href="indexG.html"><ger class="link"><img src="images/pngegg.png" style="position: absolute; left: 115px; top: 31px; width: 30px;" height="30px"></ger></a>
+      
+      <!-- Hamburger Icon -->
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-3-line"></i> <!-- This is the hamburger icon -->
+      </div>
+    
+      <ul class="nav__links" id="nav-links">
+        <a href="index.html"><li class="link">Home</li></a>
+        <a href="about.html"><li class="link">About</li></a>
+        <a href="services.html"><li class="link">Services</li></a>
+        <a href="contact.html"><li class="link">Contact</li></a>
+        <a href="gallery.html"><li class="link">Feedback</li></a>
+      </ul>
+    </nav>
+
+    <script>
+      const navToggle = document.getElementById('nav-toggle');
+      const navLinks = document.getElementById('nav-links');
+    
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    </script>
+    
+    <header>
+      <div class="section__container">
+        <div class="header__content">
+          <h1>Madu Tours LK</h1>
+          <p>
+            Discover the charm of Sri Lanka with our unique tour experiences, where your driver is also your personal guide! We offer a truly authentic way to explore this beautiful island, traveling in the comfort of either a classic tuk-tuk or a spacious van, depending on your group size and preferences. With local expertise and insider knowledge, our guide-driver will take you off the beaten path to hidden gems, cultural hotspots, and scenic wonders that you won’t find in typical tours. Whether you’re seeking adventure, relaxation, or cultural immersion, we provide a personalized, memorable journey through Sri Lanka's stunning landscapes and vibrant heritage.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="journey__container">
+      <div class="section__container">
+        <h2 class="section__title">Start Your Journey</h2>
+        <p class="section__subtitle">Most visited destinations</p>
+        <div class="journey__grid">
+          <div class="country__card">
+            <img src="images/sigiri2.jpeg" alt="place" height="210px">
+            <div class="country__name">
+              <i class="ri-map-pin-2-fill"></i>
+              <span>Sigiriya</span>
+            </div>
+          </div>
+          <div class="country__card">
+            <img src="images/yala.jpeg" alt="place" height="210px">
+            <div class="country__name">
+              <i class="ri-map-pin-2-fill"></i>
+              <span>Yala national park</span>
+            </div>
+          </div>
+          <div class="country__card">
+            <img src="images/galle.jpg" alt="place" height="210px">
+            <div class="country__name">
+              <i class="ri-map-pin-2-fill"></i>
+              <span>Galle fort</span>
+            </div>
+          </div>
+          <div class="country__card">
+            <img src="images/trinco.jpg" alt="place" height="210px">
+            <div class="country__name">
+              <i class="ri-map-pin-2-fill"></i>
+              <span>Pasikuda beach</span>
+            </div>
+          </div>
+          <div class="country__card">
+            <img src="images/anuradapura.jpg" alt="place" height="210px">
+            <div class="country__name">
+              <i class="ri-map-pin-2-fill"></i>
+              <span>Anuradapura city</span>
+            </div>
+          </div>
+          <div class="country__card">
+            <img src="images/colombo.jpg" alt="place" height="210px">
+            <div class="country__name">
+              <i class="ri-map-pin-2-fill"></i>
+              <span>Colombo city</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--<section class="banner__container">
+      <div class="section__container">
+        <div class="banner__content">
+          <h2>Discount 10-30% Off</h2>
+          <p>
+            Travel the world on a budget with our unbeatable discounted travel
+            deals. Whether you're looking for a last-minute escape or planning
+            ahead, we've got you covered with incredible discounts on flights,
+            hotels, and packages. Don't wait, book now and experience the
+            adventure of a lifetime without breaking the bank.
+          </p>
+          <button>See Tours</button>
+        </div>
+      </div>
+    <!-- </section>-- -->
+
+    <section class="display__container">
+      <div class="section__container">
+        <h2 class="section__title">Why Choose Us</h2>
+        <p class="section__subtitle">
+          The gladdest moment in human life, is a departure into unknown lands.
+        </p>
+        <div class="display__grid">
+          <div class="display__card grid-1">
+            <img src="images/grid-3.jpg" alt="grid" />
+          </div>
+          <div class="display__card">
+            <i class="ri-earth-line"></i>
+            <h4>Passionate Travel</h4>
+            <p>Fuel your passion for adventure and discover new horizons</p>
+          </div>
+          <div class="display__card">
+            <img src="images/lol1.jpg" alt="grid" style="margin-top: 40px;">
+          </div>
+          <div class="display__card">
+            <img src="images/grid-2.jpg" alt="grid" />
+          </div>
+          <div class="display__card">
+            <i class="ri-road-map-line"></i>
+            <h4>Beautiful Places</h4>
+            <p>Uncover the world's most breathtakingly beautiful places</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+          <h4>Let's Connect</h4><br>
+          <div class="social__icons">
+              <a href="https://www.facebook.com/p/Madu-Tours-Sri-Lanka-100054419203713/?locale=cy_GB"><i class="ri-facebook-fill"></i></a>
+              <a href="https://www.instagram.com/madu_tours_lk/#"><i class="ri-instagram-line"></i></a>
+              <a href="https://wa.me/94701661785"><i class="ri-whatsapp-line"></i></a>
+          </div><br>
+          <p>📍 Based in Sri Lanka | Available for custom tours</p>
+      </div>
+  </footer> 
+  
+  </body>
+</html>

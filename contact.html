@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript">
+      // Initialize EmailJS with your User ID
+      emailjs.init("39vj45mZChTdBaAKV");  // Replace with your EmailJS User ID
+    
+      // Handle form submission
+      document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+    
+        // Gather the form data
+        const formData = new FormData(event.target);
+    
+        // Send email via EmailJS service
+        emailjs.sendForm("service_k8bwmuu", "service_k8bwmuu", formData)
+          .then(function(response) {
+            alert("Your message has been sent successfully!");
+            console.log("SUCCESS", response);
+          }, function(error) {
+            alert("There was an error sending your message. Please try again.");
+            console.log("FAILED", error);
+          });
+      });
+    </script>  
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/contact.css" />
+    <title>Madu tours | Travel.co</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__logo"><a href="#">Travel.lk</a></div>
+      <a href="contactG.html"><ger class="link"><img src="images/pngegg.png" style="position: absolute; left: 115px; top: 31px; width: 30px;" height="30px"></ger></a>
+      
+      <!-- Hamburger Icon -->
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-3-line"></i> <!-- This is the hamburger icon -->
+      </div>
+    
+      <ul class="nav__links" id="nav-links">
+        <a href="index.html"><li class="link">Home</li></a>
+        <a href="about.html"><li class="link">About</li></a>
+        <a href="services.html"><li class="link">Services</li></a>
+        <a href="contact.html"><li class="link">Contact</li></a>
+        <a href="gallery.html"><li class="link">Feedback</li></a>
+      </ul>
+    </nav>
+
+    <script>
+      const navToggle = document.getElementById('nav-toggle');
+      const navLinks = document.getElementById('nav-links');
+    
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    </script>
+    
+    <header>
+      <div class="section__container">
+        <div class="header__content">
+          <h1>Madu Tours LK</h1>
+          <p>
+            Discover the charm of Sri Lanka with our unique tour experiences, where your driver is also your personal guide! We offer a truly authentic way to explore this beautiful island, traveling in the comfort of either a classic tuk-tuk or a spacious van, depending on your group size and preferences. With local expertise and insider knowledge, our guide-driver will take you off the beaten path to hidden gems, cultural hotspots, and scenic wonders that you won’t find in typical tours. Whether you’re seeking adventure, relaxation, or cultural immersion, we provide a personalized, memorable journey through Sri Lanka's stunning landscapes and vibrant heritage.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="contact">
+      <div class="section__container">
+        <h2 class="section__title">Reach Out</h2>
+        
+        <div class="contact-info">
+          <div class="contact-method">
+            <i class="ri-phone-fill"></i>
+            <h3>Phone</h3>
+            <p>+94 701 661 785</p>
+          </div>
+          <div class="contact-method">
+            <i class="ri-mail-fill"></i>
+            <h3>Email</h3>
+            <p>madutours42@gmail.com</p>
+          </div>
+          <div class="contact-method">
+            <i class="ri-map-pin-fill"></i>
+            <h3>Location</h3>
+            <p>Sri Lanka, Bentota</p>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <form id="contact-form">
+              <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="Your Email" required>
+              </div>
+              <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+              </div>
+              <button type="submit" class="btn">Send Message</button>
+          </form>
+      </div>    
+      </div>
+      </section>  
+    
+    <footer>
+        <div class="container">
+            <h4>Let's Connect</h4><br>
+            <div class="social__icons">
+              <a href="https://www.facebook.com/p/Madu-Tours-Sri-Lanka-100054419203713/?locale=cy_GB"><i class="ri-facebook-fill"></i></a>
+              <a href="https://www.instagram.com/madu_tours_lk/#"><i class="ri-instagram-line"></i></a>
+              <a href="https://wa.me/94701661785"><i class="ri-whatsapp-line"></i></a>
+            </div><br>
+            <p>📍 Based in Sri Lanka | Available for custom tours</p>
+        </div>
+    </footer>
+
+  </body>
+</html>
+
