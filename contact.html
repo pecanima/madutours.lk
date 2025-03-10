@@ -4,34 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/javascript">
-      // Initialize EmailJS with your User ID
-      emailjs.init("39vj45mZChTdBaAKV");  // Replace with your EmailJS User ID
-    
-      // Handle form submission
-      document.getElementById("contact-form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent the default form submission
-    
-        // Gather the form data
-        const formData = new FormData(event.target);
-    
-        // Send email via EmailJS service
-        emailjs.sendForm("service_k8bwmuu", "service_k8bwmuu", formData)
-          .then(function(response) {
-            alert("Your message has been sent successfully!");
-            console.log("SUCCESS", response);
-          }, function(error) {
-            alert("There was an error sending your message. Please try again.");
-            console.log("FAILED", error);
-          });
-      });
-    </script>  
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/contact.css" />
-    <title>Madu tours | Travel.co</title>
+    <title>Madu tours | Travel.lk</title>
+    
+    <!-- Include EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
   </head>
   <body>
     <nav>
@@ -40,7 +21,7 @@
       
       <!-- Hamburger Icon -->
       <div class="nav__toggle" id="nav-toggle">
-        <i class="ri-menu-3-line"></i> <!-- This is the hamburger icon -->
+        <i class="ri-menu-3-line"></i>
       </div>
     
       <ul class="nav__links" id="nav-links">
@@ -51,7 +32,6 @@
         <a href="gallery.html"><li class="link">Feedback</li></a>
       </ul>
     </nav>
-
     <script>
       const navToggle = document.getElementById('nav-toggle');
       const navLinks = document.getElementById('nav-links');
@@ -60,7 +40,7 @@
         navLinks.classList.toggle('show');
       });
     </script>
-    
+
     <header>
       <div class="section__container">
         <div class="header__content">
@@ -111,10 +91,10 @@
               </div>
               <button type="submit" class="btn">Send Message</button>
           </form>
-      </div>    
+        </div>    
       </div>
-      </section>  
-    
+    </section>  
+
     <footer>
         <div class="container">
             <h4>Let's Connect</h4><br>
@@ -127,6 +107,21 @@
         </div>
     </footer>
 
+    <script type="text/javascript">
+      emailjs.init("YOUR_USER_ID", {debug: false});
+      document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const submitButton = document.querySelector("button[type='submit']");
+        submitButton.disabled = true;
+        emailjs.sendForm("service_k8bwmuu", "template_tb74jcs", event.target)
+          .then(function(response) {
+            alert("Your message was sent successfully!");
+            submitButton.disabled = false;
+          }, function(error) {
+            alert("There was an error sending your message. Please try again.");
+            submitButton.disabled = false;
+          });
+      });
+    </script>
   </body>
 </html>
-
