@@ -108,20 +108,27 @@
     </footer>
 
     <script type="text/javascript">
-      emailjs.init("YOUR_USER_ID", {debug: false});
-      document.getElementById("contact-form").addEventListener("submit", function(event) {
-        event.preventDefault();
-        const submitButton = document.querySelector("button[type='submit']");
-        submitButton.disabled = true;
-        emailjs.sendForm("service_k8bwmuu", "template_tb74jcs", event.target)
-          .then(function(response) {
+         // Initialize EmailJS
+emailjs.init("39vj45mZChTdBaAKV"); // Replace with your EmailJS User ID
+
+// Contact form submission handling
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    const submitButton = document.querySelector("button[type='submit']");
+    submitButton.disabled = true;
+
+    // Send the form data via EmailJS
+    emailjs.sendForm("service_k8bwmuu", "template_tb74jcs", event.target)
+        .then(function(response) {
             alert("Your message was sent successfully!");
             submitButton.disabled = false;
-          }, function(error) {
+        }, function(error) {
+            console.error("Error occurred:", error);
             alert("There was an error sending your message. Please try again.");
             submitButton.disabled = false;
-          });
-      });
+        });
+});
     </script>
   </body>
 </html>
