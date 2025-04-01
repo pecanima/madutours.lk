@@ -58,7 +58,7 @@
             <div class="contact-method">
               <i class="ri-phone-fill"></i>
               <h3>Telefon</h3>
-              <p>+94 701 661 785</p>
+              <p>+94 776 170 861</p>
             </div>
             <div class="contact-method">
               <i class="ri-mail-fill"></i>
@@ -103,21 +103,28 @@
                 <p>📍 Sitz in Sri Lanka | Verfügbar für individuelle Touren</p>
             </div>
         </footer>
-      <script type="text/javascript">
-          emailjs.init("39vj45mZChTdBaAKV", {debug: false});
-          document.getElementById("contact-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            const submitButton = document.querySelector("button[type='submit']");
-            submitButton.disabled = true;
-            emailjs.sendForm("service_k8bwmuu", "template_tb74jcs", event.target)
-              .then(function(response) {
-                alert("Your message was sent successfully!");
-                submitButton.disabled = false;
-              }, function(error) {
-                alert("There was an error sending your message. Please try again.");
-                submitButton.disabled = false;
-              });
-          });
-        </script>
+     <script type="text/javascript">
+         // Initialize EmailJS
+emailjs.init("39vj45mZChTdBaAKV"); // Replace with your EmailJS User ID
+
+// Contact form submission handling
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    const submitButton = document.querySelector("button[type='submit']");
+    submitButton.disabled = true;
+
+    // Send the form data via EmailJS
+    emailjs.sendForm("service_k8bwmuu", "template_tb74jcs", event.target)
+        .then(function(response) {
+            alert("Ihre Nachricht wurde erfolgreich gesendet!");
+            submitButton.disabled = false;
+        }, function(error) {
+            console.error("Error occurred:", error);
+            alert("Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.");
+            submitButton.disabled = false;
+        });
+});
+    </script>
         </body>
       </html>
